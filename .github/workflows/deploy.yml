@@ -1,0 +1,27 @@
+name: Tự động Deploy lên Firebase
+
+on:
+  push:
+    branches:
+      - main # Chạy pipeline khi có code đẩy lên nhánh main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Tải source code về server của GitHub
+        uses: actions/checkout@v4
+
+      - name: Cài đặt Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cài đặt Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Deploy lên Firebase Hosting
+        # Lệnh này sẽ đọc file firebase.json để biết cần đẩy lên site nào
+        run: firebase deploy --only hosting --non-interactive
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
