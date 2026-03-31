@@ -5,31 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bỉm SmartAngel Nội Địa Nhật - Chân Ái Chống Hăm Cho Bé | Nobinobi</title>
     
-    <!-- SEO & Social Meta Tags -->
     <meta name="description" content="Review thực tế bỉm SmartAngel siêu mỏng, chống hăm chuẩn Nhật Bản. Giá chỉ từ 249k. Đặt hàng Nobinobi giao ngay nội thành TP.HCM trong 2h.">
     <meta property="og:title" content="Bỉm SmartAngel Nội Địa Nhật - Giá Tốt Giao Hỏa Tốc">
     <meta property="og:description" content="Mỏng nhẹ như không, thấm hút siêu tốc. Giải pháp kinh tế số 1 từ chuỗi siêu thị Nishimatsuya.">
     <meta property="og:image" content="07ac125f03544680e9e79f7293c224f0.webp">
     <meta property="og:type" content="website">
 
-    <!-- Tailwind & Fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Animate On Scroll (AOS) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#56c142', secondary: '#FF8A00', accent: '#E8F5E9', dark: '#1A202C' }
+                }
+            }
+        }
+    </script>
 
     <style>
         body { font-family: 'Nunito', sans-serif; }
         .bg-pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-        .btn-glow { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); animation: pulse 2s infinite; }
+        .btn-glow { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.7); animation: pulse 2s infinite; }
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 138, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 138, 0, 0); }
         }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-item.active .faq-answer { max-height: 200px; }
@@ -38,7 +44,6 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden">
 
-    <!-- Floating Contact Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
         <a href="tel:09xxxxxxx" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center">
             <i data-lucide="phone-call" class="w-6 h-6"></i>
@@ -48,23 +53,21 @@
         </a>
     </div>
 
-    <!-- Header Navigation -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
         <nav class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <span class="text-teal-600 font-black text-2xl tracking-tighter">NOBINOBI</span>
+                <span class="text-primary font-black text-2xl tracking-tighter">NOBINOBI</span>
             </div>
             <div class="hidden md:flex items-center space-x-8 font-bold text-slate-600">
-                <a href="#uu-diem" class="hover:text-teal-600 transition">Ưu điểm</a>
-                <a href="#review" class="hover:text-teal-600 transition">Review</a>
-                <a href="#faq" class="hover:text-teal-600 transition">Hỏi đáp</a>
+                <a href="#uu-diem" class="hover:text-primary transition">Ưu điểm</a>
+                <a href="#review" class="hover:text-primary transition">Review</a>
+                <a href="#faq" class="hover:text-primary transition">Hỏi đáp</a>
             </div>
-            <a href="#dat-hang" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold transition">Mua ngay</a>
+            <a href="#dat-hang" class="bg-secondary hover:opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition">Mua ngay</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 bg-gradient-to-br from-teal-600 to-teal-400 text-white overflow-hidden bg-pattern">
+    <section class="relative pt-32 pb-20 bg-gradient-to-br from-primary to-[#7cdb6b] text-white overflow-hidden bg-pattern">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2 text-center md:text-left z-10" data-aos="fade-right">
                 <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
@@ -74,7 +77,7 @@
                 <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 uppercase">Chân Ái <br/><span class="text-yellow-300">Chống Hăm</span> <br/>Mùa Nắng Nóng</h1>
                 <p class="text-lg md:text-xl mb-8 opacity-90 leading-relaxed font-medium">Bỉm SmartAngel - Mỏng nhẹ, thoáng khí 100%, bảo vệ làn da nhạy cảm của bé. Tiết kiệm hơn cho mẹ, thoải mái hơn cho bé.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a href="#dat-hang" class="btn-glow bg-orange-500 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-orange-600 transition flex items-center justify-center gap-2">
+                    <a href="#dat-hang" class="btn-glow bg-secondary text-white px-10 py-5 rounded-2xl font-black text-xl hover:opacity-90 transition flex items-center justify-center gap-2">
                         SĂN GIÁ TỐT NGAY <i data-lucide="chevron-right"></i>
                     </a>
                 </div>
@@ -86,29 +89,27 @@
         </div>
     </section>
 
-    <!-- Trust Badges -->
     <div class="bg-white py-10 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="flex items-center space-x-3" data-aos="fade-up">
-                <div class="bg-teal-50 p-3 rounded-2xl text-teal-600"><i data-lucide="shield-check"></i></div>
+                <div class="bg-accent p-3 rounded-2xl text-primary"><i data-lucide="shield-check"></i></div>
                 <span class="font-bold text-slate-700">100% Nội địa Nhật</span>
             </div>
             <div class="flex items-center space-x-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-teal-50 p-3 rounded-2xl text-teal-600"><i data-lucide="truck"></i></div>
+                <div class="bg-accent p-3 rounded-2xl text-primary"><i data-lucide="truck"></i></div>
                 <span class="font-bold text-slate-700">Ship hỏa tốc 2h</span>
             </div>
             <div class="flex items-center space-x-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-teal-50 p-3 rounded-2xl text-teal-600"><i data-lucide="refresh-cw"></i></div>
+                <div class="bg-accent p-3 rounded-2xl text-primary"><i data-lucide="refresh-cw"></i></div>
                 <span class="font-bold text-slate-700">Đổi trả linh hoạt</span>
             </div>
             <div class="flex items-center space-x-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-teal-50 p-3 rounded-2xl text-teal-600"><i data-lucide="medal"></i></div>
+                <div class="bg-accent p-3 rounded-2xl text-primary"><i data-lucide="medal"></i></div>
                 <span class="font-bold text-slate-700">Đền 200% nếu giả</span>
             </div>
         </div>
     </div>
 
-    <!-- Main Product Card -->
     <section id="dat-hang" class="py-24 bg-slate-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col md:flex-row items-stretch border border-gray-100">
@@ -121,7 +122,7 @@
                         <span class="text-sm font-bold text-slate-400 underline">(5.0/5.0 - 1.2k Đánh giá)</span>
                     </div>
                     <h2 class="text-4xl font-black text-slate-900 mb-2 uppercase">Bỉm SmartAngel Nhật Bản</h2>
-                    <p class="text-teal-600 font-bold mb-6 italic text-lg leading-tight">Mềm mỏng như lụa - Thông thoáng tối đa</p>
+                    <p class="text-primary font-bold mb-6 italic text-lg leading-tight">Mềm mỏng như lụa - Thông thoáng tối đa</p>
                     
                     <div class="flex items-baseline gap-4 mb-8">
                         <span class="text-5xl font-black text-red-500">249.000đ</span>
@@ -131,27 +132,26 @@
 
                     <div class="space-y-4 mb-10">
                         <div class="flex items-start gap-3">
-                            <div class="bg-green-100 text-green-600 p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <div class="bg-accent text-primary p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
                             <p class="font-semibold text-slate-700 leading-tight text-lg">Đủ size S/M/L/XL/XXL (4kg - 22kg)</p>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="bg-green-100 text-green-600 p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <div class="bg-accent text-primary p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
                             <p class="font-semibold text-slate-700 leading-tight text-lg">Thiết kế dải màu báo đầy tiện lợi</p>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="bg-green-100 text-green-600 p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
+                            <div class="bg-accent text-primary p-1 rounded-full"><i data-lucide="check" class="w-4 h-4"></i></div>
                             <p class="font-semibold text-slate-700 leading-tight text-lg">Hạt SAP ngậm nước cao cấp từ Nhật</p>
                         </div>
                     </div>
 
-                    <button class="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white font-black text-2xl py-6 rounded-2xl shadow-xl hover:-translate-y-1 transition active:scale-95 uppercase tracking-wide">Đặt hàng ngay tại đây</button>
+                    <button class="w-full bg-gradient-to-r from-secondary to-[#FF5E00] text-white font-black text-2xl py-6 rounded-2xl shadow-xl hover:-translate-y-1 transition active:scale-95 uppercase tracking-wide">Đặt hàng ngay tại đây</button>
                     <p class="text-center mt-4 text-slate-400 text-sm font-medium italic">* Ưu đãi kết thúc sau: <span id="countdown" class="text-red-500 font-bold">12:00:00</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Review Section -->
     <section id="review" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-20" data-aos="fade-up">
@@ -162,7 +162,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-slate-50 p-8 rounded-[2rem] border border-gray-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="0">
                     <img src="43cae3195a39041d9bf123a04306084f.webp" alt="Siêu mỏng" class="w-full rounded-2xl mb-8 shadow-sm">
-                    <h3 class="text-2xl font-bold mb-4 text-teal-600 flex items-center gap-2">
+                    <h3 class="text-2xl font-bold mb-4 text-primary flex items-center gap-2">
                         <i data-lucide="wind" class="w-6"></i> Siêu mỏng 2mm
                     </h3>
                     <p class="text-slate-600 font-medium leading-relaxed">Đặc biệt phù hợp mùa hè Việt Nam. Bé vận động cả ngày không bí bách, không xệ đũng.</p>
@@ -185,7 +185,6 @@
         </div>
     </section>
 
-    <!-- FAQ Accordion -->
     <section id="faq" class="py-24 bg-slate-50">
         <div class="max-w-4xl mx-auto px-4">
             <h2 class="text-4xl font-black text-center text-slate-900 mb-16 uppercase italic">Hỏi Nhanh Đáp Gọn</h2>
@@ -229,7 +228,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 text-white pt-24 pb-12">
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
@@ -237,13 +235,13 @@
                     <h2 class="text-4xl font-black mb-8 italic">NOBINOBI.VN</h2>
                     <p class="text-slate-400 text-lg leading-relaxed mb-8">Chúng tôi cam kết mang đến những sản phẩm tốt nhất từ Nhật Bản cho bé yêu của bạn. Sự hài lòng và an toàn của bé là ưu tiên số 1.</p>
                     <div class="flex space-x-4">
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-white">
+    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
         </svg>
     </a>
     
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-white">
+    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
         <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -251,7 +249,7 @@
         </svg>
     </a>
 
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-white">
+    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
         <i data-lucide="mail" class="w-6 h-6"></i>
     </a>
 </div>
@@ -260,13 +258,13 @@
                     <h3 class="text-2xl font-bold mb-6">Liên Hệ Với Chúng Tôi</h3>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-4 text-slate-300">
-                            <i data-lucide="map-pin" class="text-teal-400"></i> Quận 1, TP. Hồ Chí Minh
+                            <i data-lucide="map-pin" class="text-primary"></i> Quận 1, TP. Hồ Chí Minh
                         </li>
                         <li class="flex items-center gap-4 text-slate-300">
-                            <i data-lucide="phone" class="text-teal-400"></i> Hotline: 09xx.xxx.xxx
+                            <i data-lucide="phone" class="text-primary"></i> Hotline: 09xx.xxx.xxx
                         </li>
                         <li class="flex items-center gap-4 text-slate-300">
-                            <i data-lucide="clock" class="text-teal-400"></i> Hỗ trợ: 24/7
+                            <i data-lucide="clock" class="text-primary"></i> Hỗ trợ: 24/7
                         </li>
                     </ul>
                 </div>
@@ -277,7 +275,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Initialize AOS
