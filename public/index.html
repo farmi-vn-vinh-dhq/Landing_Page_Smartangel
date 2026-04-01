@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -63,7 +62,10 @@
                 <a href="#review" class="hover:text-primary transition">Review</a>
                 <a href="#faq" class="hover:text-primary transition">Hỏi đáp</a>
             </div>
-            <a href="#dat-hang" class="bg-secondary hover:opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition">Mua ngay</a>
+            <a href="cart.html" class="relative bg-secondary hover:opacity-90 text-white px-6 py-2.5 rounded-full font-bold transition flex items-center gap-2">
+                <i data-lucide="shopping-cart" class="w-5 h-5"></i> Giỏ hàng
+                <span id="cart-count-header" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-white">0</span>
+            </a>
         </nav>
     </header>
 
@@ -145,7 +147,10 @@
                         </div>
                     </div>
 
-                    <button class="w-full bg-gradient-to-r from-secondary to-[#FF5E00] text-white font-black text-2xl py-6 rounded-2xl shadow-xl hover:-translate-y-1 transition active:scale-95 uppercase tracking-wide">Đặt hàng ngay tại đây</button>
+                    <button onclick="addToCart()" class="w-full bg-gradient-to-r from-secondary to-[#FF5E00] text-white font-black text-2xl py-6 rounded-2xl shadow-xl hover:-translate-y-1 transition active:scale-95 uppercase tracking-wide flex justify-center items-center gap-3">
+                        <i data-lucide="shopping-cart" class="w-8 h-8"></i> Thêm Vào Giỏ Hàng
+                    </button>
+                    
                     <p class="text-center mt-4 text-slate-400 text-sm font-medium italic">* Ưu đãi kết thúc sau: <span id="countdown" class="text-red-500 font-bold">12:00:00</span></p>
                 </div>
             </div>
@@ -235,24 +240,22 @@
                     <h2 class="text-4xl font-black mb-8 italic">NOBINOBI.VN</h2>
                     <p class="text-slate-400 text-lg leading-relaxed mb-8">Chúng tôi cam kết mang đến những sản phẩm tốt nhất từ Nhật Bản cho bé yêu của bạn. Sự hài lòng và an toàn của bé là ưu tiên số 1.</p>
                     <div class="flex space-x-4">
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-        </svg>
-    </a>
-    
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
-        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-        </svg>
-    </a>
-
-    <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
-        <i data-lucide="mail" class="w-6 h-6"></i>
-    </a>
-</div>
+                        <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-slate-800 p-4 rounded-2xl hover:bg-slate-700 transition text-primary">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </a>
+                    </div>
                 </div>
                 <div class="bg-slate-800 p-10 rounded-[3rem] border border-slate-700">
                     <h3 class="text-2xl font-bold mb-6">Liên Hệ Với Chúng Tôi</h3>
@@ -314,6 +317,45 @@
             }, 1000);
         }
         startCountdown();
+
+        // --- BỔ SUNG LOGIC GIỎ HÀNG ---
+        function getCart() {
+            const cart = localStorage.getItem('cart');
+            return cart ? JSON.parse(cart) : [];
+        }
+
+        function saveCart(cart) {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+            const countElement = document.getElementById('cart-count-header');
+            if (countElement) {
+                countElement.innerText = cart.length;
+            }
+        }
+
+        function addToCart() {
+            const cart = getCart();
+            const product = {
+                id: 'bim-smartangel-' + Date.now(), 
+                name: 'Bỉm SmartAngel Nhật Bản',
+                price: '249.000đ',
+                image: '07ac125f03544680e9e79f7293c224f0.webp'
+            };
+            
+            cart.push(product);
+            saveCart(cart);
+            updateCartCount();
+            
+            alert('Tuyệt vời! Sản phẩm đã được thêm vào giỏ hàng.');
+        }
+
+        // Khởi tạo số lượng giỏ hàng khi tải trang
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+        });
     </script>
 </body>
 </html>
