@@ -23,10 +23,11 @@
 
     <noscript>
         <style>
-            /* Ẩn phần tổng cộng và thanh toán vì không dùng được khi tắt JS */
-            #cart-summary { display: none !important; }
-            /* Ẩn nút giỏ hàng header vì không hoạt động */
+            #cart-items, #cart-summary { display: none !important; }
             #cart-count-header { display: none !important; }
+            body { font-family: 'Nunito', Arial, sans-serif; line-height: 1.6; color: #1A202C; margin: 0; background: #f8fafc; }
+            img { max-width: 100%; height: auto; }
+            h1, h2, h3 { color: #1A202C; margin: 16px 0; }
         </style>
     </noscript>
 </head>
@@ -52,18 +53,58 @@
     <main class="max-w-4xl mx-auto px-4 py-32 flex-grow w-full">
         <h1 class="text-4xl md:text-5xl font-black text-center text-slate-900 mb-12 uppercase">Giỏ Hàng Của Bạn</h1>
         
-        <div id="cart-items" class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 p-8 space-y-8">
-            <noscript>
-                <div style="text-align:center; padding:24px 16px;">
-                    <div style="background:#FFF3CD; border:1px solid #FFE69C; color:#664D03; padding:16px 20px; border-radius:12px; margin-bottom:24px; font-weight:600;">
-                        Trình duyệt của bạn đang tắt JavaScript. Giỏ hàng cần JavaScript để hiển thị sản phẩm đã lưu.
-                    </div>
-                    <p style="color:#475569; font-size:1.1rem; margin-bottom:24px;">Vui lòng bật JavaScript để xem giỏ hàng, hoặc liên hệ đặt hàng trực tiếp qua hotline:</p>
-                    <a href="tel:09xxxxxxx" style="display:inline-flex; align-items:center; gap:8px; padding:16px 32px; background:#FF8A00; color:#fff; text-decoration:none; border-radius:16px; font-weight:900; font-size:1.25rem;">
-                        Gọi Đặt Hàng: 09xx.xxx.xxx
-                    </a>
+        <!-- Noscript: Hiển thị danh mục sản phẩm + liên hệ khi tắt JS -->
+        <noscript>
+            <div style="background:#fff; border-radius:24px; box-shadow:0 4px 24px rgba(0,0,0,0.08); border:1px solid #e5e7eb; padding:24px 32px; margin-bottom:24px;">
+                <div style="background:#FFF3CD; border:1px solid #FFE69C; color:#664D03; padding:12px 16px; border-radius:12px; margin-bottom:24px; font-weight:600; text-align:center;">
+                    Vui lòng bật JavaScript để sử dụng giỏ hàng trực tuyến. Hoặc liên hệ trực tiếp để đặt hàng.
                 </div>
-            </noscript>
+                <h2 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:24px; text-transform:uppercase;">Sản phẩm của Nobinobi</h2>
+                <div style="display:flex; flex-direction:column; gap:24px;">
+                    <div style="display:flex; align-items:center; gap:16px; border-bottom:1px solid #f1f5f9; padding-bottom:24px;">
+                        <div style="background:#E8F5E9; border-radius:16px; padding:8px; width:80px; height:80px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                            <img src="07ac125f03544680e9e79f7293c224f0.webp" alt="Bỉm SmartAngel Nhật Bản" style="max-height:64px; object-fit:contain;">
+                        </div>
+                        <div>
+                            <h3 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin:0 0 4px 0;">Bỉm SmartAngel Nhật Bản</h3>
+                            <p style="color:#56c142; font-weight:800; font-size:1.1rem; margin:0 0 4px 0;">249.000đ</p>
+                            <p style="color:#94a3b8; font-size:0.85rem; margin:0;">Đủ size S/M/L/XL/XXL (4kg - 22kg)</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:16px; border-bottom:1px solid #f1f5f9; padding-bottom:24px;">
+                        <div style="background:#E8F5E9; border-radius:16px; padding:8px; width:80px; height:80px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                            <img src="smartangel-l-8-12kg.webp" alt="Bỉm Quần SmartAngel Size L" style="max-height:64px; object-fit:contain;">
+                        </div>
+                        <div>
+                            <h3 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin:0 0 4px 0;">Bỉm Quần SmartAngel Size L (8-12kg, 44 miếng)</h3>
+                            <p style="color:#56c142; font-weight:800; font-size:1.1rem; margin:0 0 4px 0;">329.000đ</p>
+                            <p style="color:#94a3b8; font-size:0.85rem; margin:0;">Thiết kế quần, thoáng khí, thấm hút nhanh</p>
+                        </div>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:16px;">
+                        <div style="background:#E8F5E9; border-radius:16px; padding:8px; width:80px; height:80px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                            <img src="smartangel-xl-11-14kg.webp" alt="Bỉm Quần SmartAngel Size XL" style="max-height:64px; object-fit:contain;">
+                        </div>
+                        <div>
+                            <h3 style="font-size:1.1rem; font-weight:700; color:#0f172a; margin:0 0 4px 0;">Bỉm Quần SmartAngel Size XL (11-14kg, 38 miếng) - Mua 1 Tặng 1</h3>
+                            <p style="color:#56c142; font-weight:800; font-size:1.1rem; margin:0 0 4px 0;">349.000đ</p>
+                            <p style="color:#94a3b8; font-size:0.85rem; margin:0;">Khuyến mãi đặc biệt, phù hợp bé 11-14kg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background:#fff; border-radius:24px; box-shadow:0 8px 32px rgba(86,193,66,0.15); border:2px solid rgba(86,193,66,0.2); padding:32px; text-align:center;">
+                <h2 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin:0 0 16px 0; text-transform:uppercase;">Đặt hàng trực tiếp</h2>
+                <p style="color:#64748b; margin:0 0 20px 0;">Liên hệ Nobinobi để đặt hàng nhanh nhất:</p>
+                <div style="display:flex; flex-direction:column; gap:12px; max-width:360px; margin:0 auto;">
+                    <a href="tel:09xxxxxxx" style="display:block; background:#56c142; color:#fff; font-weight:900; padding:16px; border-radius:16px; text-decoration:none; font-size:1.1rem;">Gọi: 09xx.xxx.xxx</a>
+                    <a href="https://nobinobi.vn" style="display:block; background:#FF8A00; color:#fff; font-weight:900; padding:16px; border-radius:16px; text-decoration:none; font-size:1.1rem;">Truy cập Nobinobi.vn</a>
+                </div>
+                <p style="color:#94a3b8; font-size:0.85rem; margin:16px 0 0 0;">Quận 1, TP. Hồ Chí Minh | Hỗ trợ: 24/7</p>
+            </div>
+        </noscript>
+
+        <div id="cart-items" class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 p-8 space-y-8">
             </div>
 
         <div id="cart-summary" class="mt-12 bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 p-8 hidden">
