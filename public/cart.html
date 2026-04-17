@@ -20,6 +20,15 @@
     <style>
         body { font-family: 'Nunito', sans-serif; }
     </style>
+
+    <noscript>
+        <style>
+            /* Ẩn phần tổng cộng và thanh toán vì không dùng được khi tắt JS */
+            #cart-summary { display: none !important; }
+            /* Ẩn nút giỏ hàng header vì không hoạt động */
+            #cart-count-header { display: none !important; }
+        </style>
+    </noscript>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
 
@@ -44,6 +53,17 @@
         <h1 class="text-4xl md:text-5xl font-black text-center text-slate-900 mb-12 uppercase">Giỏ Hàng Của Bạn</h1>
         
         <div id="cart-items" class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 p-8 space-y-8">
+            <noscript>
+                <div style="text-align:center; padding:24px 16px;">
+                    <div style="background:#FFF3CD; border:1px solid #FFE69C; color:#664D03; padding:16px 20px; border-radius:12px; margin-bottom:24px; font-weight:600;">
+                        Trình duyệt của bạn đang tắt JavaScript. Giỏ hàng cần JavaScript để hiển thị sản phẩm đã lưu.
+                    </div>
+                    <p style="color:#475569; font-size:1.1rem; margin-bottom:24px;">Vui lòng bật JavaScript để xem giỏ hàng, hoặc liên hệ đặt hàng trực tiếp qua hotline:</p>
+                    <a href="tel:09xxxxxxx" style="display:inline-flex; align-items:center; gap:8px; padding:16px 32px; background:#FF8A00; color:#fff; text-decoration:none; border-radius:16px; font-weight:900; font-size:1.25rem;">
+                        Gọi Đặt Hàng: 09xx.xxx.xxx
+                    </a>
+                </div>
+            </noscript>
             </div>
 
         <div id="cart-summary" class="mt-12 bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-gray-100 p-8 hidden">
